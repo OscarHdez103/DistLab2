@@ -15,7 +15,7 @@ func main() {
 	client, _ := rpc.Dial("tcp", *server)
 	defer client.Close()
 
-	request := stubs.Request{Message: "Hello"}
+	request := stubs.Request{Message: "Hello World"}
 	response := new(stubs.Response)
 	client.Call(stubs.ReverseHandler, request, response)
 	fmt.Println("Responded: " + response.Message)
