@@ -18,5 +18,6 @@ func main() {
 	request := stubs.Request{Message: "Hello World"}
 	response := new(stubs.Response)
 	client.Call(stubs.ReverseHandler, request, response)
-	fmt.Println("Responded: "+response.Message)
+	fmt.Println("Responded: " + response.Message)
+
 }
